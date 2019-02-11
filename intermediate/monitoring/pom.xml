@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.integration.samples</groupId>
   <artifactId>monitoring</artifactId>
-  <version>5.0.0.BUILD-SNAPSHOT</version>
+  <version>5.1.1.BUILD-SNAPSHOT</version>
   <name>Monitoring Application</name>
   <description>Monitoring Application</description>
   <url>http://projects.spring.io/spring-integration</url>
@@ -58,35 +58,20 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.integration</groupId>
-      <artifactId>spring-integration-twitter</artifactId>
+      <artifactId>spring-integration-social-twitter</artifactId>
+      <version>1.0.0.RELEASE</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -96,16 +81,8 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -115,16 +92,8 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -135,16 +104,8 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -155,16 +116,8 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>jackson-module-kotlin</artifactId>
           <groupId>com.fasterxml.jackson.module</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter-jetty</artifactId>
-          <groupId>*</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -199,7 +152,7 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>2.10.0</version>
+      <version>2.18.0</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -236,34 +189,19 @@
       <url>https://repo.spring.io/libs-snapshot</url>
     </repository>
   </repositories>
-  <packaging>war</packaging>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>8.1.14.v20131031</version>
-        <configuration>
-          <webAppConfig>
-            <contextPath>/monitoring</contextPath>
-          </webAppConfig>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.springframework.integration</groupId>
-        <artifactId>spring-integration-bom</artifactId>
-        <version>5.0.3.RELEASE</version>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>5.1.3.RELEASE</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
       <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>5.0.4.RELEASE</version>
+        <groupId>org.springframework.integration</groupId>
+        <artifactId>spring-integration-bom</artifactId>
+        <version>5.1.1.RELEASE</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
